@@ -1,0 +1,43 @@
+header.--news {
+    position: absolute;
+    nav {
+        .container-fluid {
+            ul {
+                li {
+                    color: #ffffff;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+.bannermain.--news {
+    .container {
+        display: initial;
+        .bannerslogan {
+            width: 100%;
+            max-width: initial;
+            &:after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #ffffff;
+                margin-top: 50px;
+                display: block;
+                @include xs {
+                    margin-top: 30px;
+                }
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+    .menuburger.--news {
+        bottom: 0;
+        top: initial;
+        transform: initial;
+    }
+}

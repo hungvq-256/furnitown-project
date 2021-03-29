@@ -1,0 +1,192 @@
+.header.--newsdetail {
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .right {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            a {
+                @include text(14px, arial, none, #000000, upperCase);
+                text-decoration: none;
+                display: block;
+                margin-right: 10px;
+            }
+            i {
+                width: 30px;
+                height: 100%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+.newsarticle {
+    margin-top: 100px;
+    .container {
+        .newsbannerimg {
+            position: relative;
+            padding-top: 50%;
+            overflow: hidden;
+            img {
+                @include midimg;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .newstitle {
+            @include text(20px, eb, none, #000000, uppercase);
+            padding: 70px 0 30px;
+            width: 70%;
+            @include sm {
+                width: 100%;
+            }
+        }
+        .newssubtitle {
+            @include text(12px, arial, none, #000000, uppercase);
+            padding-bottom: 40px;
+            width: 70%;
+            @include sm {
+                width: 100%;
+            }
+        }
+        .newscreated {
+            @include text(12px, ebi, none, #000000, none);
+            margin: 40px 0;
+        }
+        .newscontent {
+            @include text(12px, arial, 2, #000000, none);
+            padding-top: 40px;
+            padding-bottom: 140px;
+            width: 70%;
+            @include sm {
+                width: 100%;
+            }
+            @include xs {
+                padding-bottom: 80px;
+            }
+        }
+    }
+}
+.newsarticalother {
+    .container {
+        margin-bottom: 50px;
+        .titleseparate {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            text-align: center;
+            &:after,
+            &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #111111;
+            }
+            &:before {
+                margin-right: 20px;
+            }
+            &:after {
+                margin-left: 20px;
+            }
+            p {
+                @include text(12px, ebb, none, #111111, uppercase);
+                font-weight: bolder;
+                width: 400px;
+                display: block;
+            }
+        }
+    }
+}
+.newsarticallist {
+    &__item {
+        @include xs {
+            margin-bottom: 30px;
+        }
+        .img {
+            position: relative;
+            padding-top: 70%;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                @include midimg;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%) scale(1);
+                transition: all 1s;
+            }
+        }
+        .content {
+            h4 {
+                font-size: 12px;
+                font-family: AB;
+                text-transform: uppercase;
+                font-weight: bolder;
+                padding: 20px 0;
+                transition: all 0.3s;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 12px;
+                font-family: A;
+            }
+
+            .wrap-btn {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                margin-top: 20px;
+                width: 60%;
+                img {
+                    position: relative;
+                    width: 30px;
+                    margin: 0;
+                    transition: all 0.3s;
+                    left: 0;
+                }
+                span {
+                    font-size: 11px;
+                    position: relative;
+                    left: 0px;
+                    transition: all 0.3s;
+                    color: $black-cl;
+                    margin-left: 10px;
+                }
+
+                &:hover {
+                    span {
+                        left: -40px;
+                        transition: all 0.3s;
+                    }
+
+                    img {
+                        left: 90px;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .img {
+                img {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    transition: all 1s;
+                }
+            }
+
+            h4 {
+                color: $orange-cl;
+                transition: all 0.3s;
+            }
+        }
+    }
+}

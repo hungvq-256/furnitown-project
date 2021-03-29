@@ -1,0 +1,72 @@
+// scss footer
+footer {
+    height: 945px;
+    background: $blue-cl;
+    padding-bottom: 205px;
+    position: relative;
+    .container {
+        height: 100%;
+        .footerinfo {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            &__logo {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                &::before,
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: #665d49;
+                }
+                img {
+                    margin: 0 40px;
+                }
+            }
+            &__text {
+                @include text(11px, arial, 18px, #ffffff, upperCase);
+                margin-top: 55px;
+                p {
+                    text-align: center;
+                    & + p {
+                        padding-top: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .backtotop {
+        @include text(12px, arial, none, #ffffff, upperCase);
+        position: absolute;
+        bottom: 125px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        transform: rotate(90deg);
+        cursor: pointer;
+        padding: 10px 0;
+        @include xs {
+            bottom: 100px;
+            right: -50px;
+        }
+        &:before {
+            content: "";
+            width: 100px;
+            height: 1px;
+            background: #ffffff;
+            display: block;
+            margin-right: 10px;
+            @include xs {
+                width: 70px;
+            }
+        }
+    }
+}
+
+footer.--sitepage {
+    height: 532px;
+}

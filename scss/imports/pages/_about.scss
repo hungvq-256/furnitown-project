@@ -1,0 +1,210 @@
+.menuburger.--aboutpage {
+    position: absolute;
+    top: 270px;
+    left: 0;
+}
+.menu-aboutus {
+    height: 150px;
+    width: 150px;
+    background: #132539;
+    padding: 35px 0;
+    position: absolute;
+    top: 270px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    .logo {
+        img {
+            width: 40px;
+        }
+    }
+
+    .logo-black {
+        position: relative;
+        display: none;
+
+        img {
+            width: 80px;
+            margin-right: 15px;
+            margin-top: -10px;
+        }
+
+        &:before {
+            content: "";
+            height: 1px;
+            width: 80px;
+            background: $line-cl;
+            position: absolute;
+            bottom: -10px;
+            right: 15px;
+        }
+    }
+
+    .menu-hover {
+        height: 100%;
+        display: none;
+
+        p {
+            color: $black-cl;
+            font-size: 14px;
+            font-family: A;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &:hover {
+        width: 180px;
+        background: #fff;
+        transition: all 0.5s;
+
+        .logo {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .logo-black {
+            display: block;
+        }
+
+        .menu-hover {
+            display: block;
+        }
+    }
+}
+.introduce {
+    margin-top: 70px;
+    .container {
+        h1 {
+            font-size: 44px;
+            font-family: E;
+            color: #73592d;
+            text-align: center;
+        }
+        p {
+            @include text(14px, arial, none, #000000, upperCase);
+            font-weight: lighter;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 48px;
+            line-height: 2;
+        }
+        img {
+            // max-width: 90%;
+            width: 100%;
+        }
+    }
+}
+
+.line {
+    .container {
+        p {
+            @include text(14px, arial, 1.5, #000000, none);
+            text-align: center;
+            position: relative;
+            padding-top: 70px;
+            padding-bottom: 260px;
+            max-width: 480px;
+            margin: 0 auto;
+            @include xs {
+                padding-bottom: 240px;
+            }
+            &:before {
+                content: "";
+                background: #585958;
+                width: 1px;
+                height: 230px;
+                position: absolute;
+                right: 50%;
+                top: 150px;
+                @include xs {
+                    height: 200px;
+                    // top: 160px;
+                }
+            }
+        }
+    }
+}
+
+.aboutus-content {
+    p {
+        font-size: 14px;
+        font-family: AB;
+        line-height: 2;
+        width: 65%;
+        @include sm {
+            width: 75%;
+        }
+        @include xs {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    img {
+        padding-top: 110px;
+        @include xs {
+            padding-top: 60px;
+        }
+    }
+}
+
+.leadership {
+    text-align: center;
+    font-family: arial;
+    padding-top: 150px;
+    position: relative;
+    @include xs {
+        padding-top: 75px;
+    }
+    p:nth-child(1) {
+        font-size: 14px;
+        line-height: 2;
+        margin: 20px auto;
+        width: 50%;
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    p:nth-child(2) {
+        font-size: 16px;
+        margin: 20px 0;
+        font-weight: bolder;
+    }
+
+    p:nth-child(3) {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    div {
+        position: relative;
+        img {
+            width: 70%;
+            @include sm {
+                width: 75%;
+            }
+            @include xs {
+                width: 100%;
+            }
+        }
+        i {
+            position: absolute;
+            bottom: -35px;
+            right: 120px;
+            @include sm {
+                right: 60px;
+            }
+            @include xs {
+                right: 0;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
