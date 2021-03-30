@@ -115,6 +115,7 @@
             padding-top: 70%;
             overflow: hidden;
             cursor: pointer;
+            display: block;
             img {
                 @include midimg;
                 width: 100%;
@@ -125,14 +126,18 @@
             }
         }
         .content {
-            h4 {
-                font-size: 12px;
-                font-family: AB;
-                text-transform: uppercase;
-                font-weight: bolder;
-                padding: 20px 0;
-                transition: all 0.3s;
-                cursor: pointer;
+            a {
+                text-decoration: none;
+                color: #000000;
+                h4 {
+                    font-size: 12px;
+                    font-family: arial;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                    padding: 20px 0;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                }
             }
 
             p {
@@ -146,6 +151,7 @@
                 cursor: pointer;
                 margin-top: 20px;
                 width: 60%;
+                text-decoration: none;
                 img {
                     position: relative;
                     width: 30px;
